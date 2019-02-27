@@ -135,7 +135,7 @@ class TestXueqiu(unittest.TestCase):
     # 添加一只美股，判断是否添加成功 test_add_us
     # 然后删除一只美股，判断删除成功 test_delete_us
     # 利用参数化或者数据驱动添加30只股票 test_add_batch
-    # 添加10只美股，当全部股票大于2页的时候断言某个股票同时存在于“美股”与“全部”分类中 test_exist_in_all
+
     def test_add_us(self):
         self.load_zixuan()
         self.driver.implicitly_wait(3)
@@ -159,13 +159,23 @@ class TestXueqiu(unittest.TestCase):
         # test_delete_us
         #  定位到元素,长按 点击删除
 
-        element = self.driver.find_element_by_xpath("//*[@class='android.widget.LinearLayout']")
+        element = self.driver.find_element_by_id("portfolio_stockName")
         TouchAction(self.driver).long_press(element, None, None, 10000).perform()
 
-        self.driver.find_element_by_xpath("//*[@text='删除']").click()
+        self.driver.find_element_by_xpath("//*[@text='删除' and contains(@resource-id, 'md_title')]").click()
 
         assert 1 == len(self.driver.find_elements_by_id("add_to_portfolio_stock"))
         self.driver.quit()
+
+    # 添加10只美股，当全部股票大于2页的时候断言某个股票同时存在于“美股”与“全部”分类中 test_exist_in_all
+    def test_exist_in_all(self):
+    # 每股 :特斯拉 苹果 汽车之家 百度 谷歌C  陌陌  优信 阿里巴巴 聚美优品  拼多多
+        self.load_zixuan()
+        self.driver.implicitly_wait(3)
+        self.driver.find_element_by_xpath("//*[@text='美股']").click()
+        if len(self.driver.find_elements_by_id("add_to_portfolio_stock")) > 0:
+            self.driver.find_element_by_id("add_to_portfolio_stock").click()
+
 
 
     def tearDown(self):

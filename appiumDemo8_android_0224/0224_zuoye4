@@ -1,0 +1,112 @@
+作业4:
+1.提取所有adb相关的命令，给出每个命令的作用，回帖
+2.提取所有的http协议，给出说明， get post的请求与json请求体提取出来，做出说明
+
+awk '$3=="[ADB]"' appium0227.log >adb.log
+# 检查adb是否存在
+2019-02-27 15:11:49:219 [ADB] Checking whether adb is present
+# '在D盘sdk目录下找到29个build-tools文件夹
+2019-02-27 15:11:49:225 [ADB] Found 29 'build-tools' folders under 'D:\android\android-sdk-windows' (newest first):
+2019-02-27 15:11:49:225 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.3
+2019-02-27 15:11:49:225 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.2
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.1
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.0
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.0-preview
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/27.0.3
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/27.0.2
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/27.0.1
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/27.0.0
+2019-02-27 15:11:49:226 [ADB]     D:/android/android-sdk-windows/build-tools/26.0.3
+2019-02-27 15:11:49:227 [ADB]     D:/android/android-sdk-windows/build-tools/26.0.2
+2019-02-27 15:11:49:227 [ADB]     D:/android/android-sdk-windows/build-tools/26.0.1
+2019-02-27 15:11:49:227 [ADB]     D:/android/android-sdk-windows/build-tools/26.0.0
+2019-02-27 15:11:49:227 [ADB]     D:/android/android-sdk-windows/build-tools/26.0.0-preview
+2019-02-27 15:11:49:227 [ADB]     D:/android/android-sdk-windows/build-tools/25.0.3
+2019-02-27 15:11:49:227 [ADB]     D:/android/android-sdk-windows/build-tools/25.0.2
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/25.0.1
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/25.0.0
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/24.0.3
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/24.0.2
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/24.0.1
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/24.0.0
+2019-02-27 15:11:49:228 [ADB]     D:/android/android-sdk-windows/build-tools/23.0.3
+2019-02-27 15:11:49:229 [ADB]     D:/android/android-sdk-windows/build-tools/23.0.2
+2019-02-27 15:11:49:229 [ADB]     D:/android/android-sdk-windows/build-tools/23.0.1
+2019-02-27 15:11:49:229 [ADB]     D:/android/android-sdk-windows/build-tools/22.0.1
+2019-02-27 15:11:49:229 [ADB]     D:/android/android-sdk-windows/build-tools/21.1.2
+2019-02-27 15:11:49:229 [ADB]     D:/android/android-sdk-windows/build-tools/20.0.0
+2019-02-27 15:11:49:229 [ADB]     D:/android/android-sdk-windows/build-tools/19.1.0
+# 使用sdk目录下的adb执行程序
+2019-02-27 15:11:49:230 [ADB] Using adb.exe from D:\android\android-sdk-windows\platform-tools\adb.exe
+# 尝试找到一个连接的android设备
+2019-02-27 15:11:49:230 [ADB] Trying to find a connected android device
+# 获取连接设备
+2019-02-27 15:11:49:231 [ADB] Getting connected devices...
+# 1个设备已连接
+2019-02-27 15:11:49:258 [ADB] 1 device(s) connected
+# 设置设备id
+2019-02-27 15:11:49:260 [ADB] Setting device id to GWY0217207001917
+2019-02-27 15:11:49:261 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.build.version.sdk'
+2019-02-27 15:11:49:336 [ADB] Current device property 'ro.build.version.sdk': 26
+2019-02-27 15:11:49:336 [ADB] Device API level: 26
+2019-02-27 15:11:49:337 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm list packages com.xueqiu.android'
+2019-02-27 15:11:49:854 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 wait-for-device'
+2019-02-27 15:11:49:882 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell echo ping'
+2019-02-27 15:11:49:932 [ADB] Getting install status for io.appium.settings
+2019-02-27 15:11:49:932 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package io.appium.settings'
+2019-02-27 15:11:50:017 [ADB] 'io.appium.settings' is installed
+2019-02-27 15:11:50:018 [ADB] Getting package info for 'io.appium.settings'
+2019-02-27 15:11:50:018 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package io.appium.settings'
+2019-02-27 15:11:50:082 [ADB] Checking whether aapt is present
+2019-02-27 15:11:50:083 [ADB] Using aapt.exe from D:\android\android-sdk-windows\build-tools\28.0.3\aapt.exe
+2019-02-27 15:11:50:099 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('2.11.0' >= '2.11.0')
+2019-02-27 15:11:50:099 [ADB] There is no need to install/upgrade 'C:\Users\21422\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk'
+2019-02-27 15:11:50:100 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ps'
+2019-02-27 15:11:50:211 [ADB] Device API level: 26
+2019-02-27 15:11:50:211 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell appops set io.appium.settings android\:mock_location allow'
+2019-02-27 15:11:50:332 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell settings get secure default_input_method'
+2019-02-27 15:11:50:400 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ime enable io.appium.settings/.UnicodeIME'
+2019-02-27 15:11:50:782 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ime set io.appium.settings/.UnicodeIME'
+2019-02-27 15:11:51:146 [ADB] Getting device platform version
+2019-02-27 15:11:51:146 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.build.version.release'
+2019-02-27 15:11:51:184 [ADB] Current device property 'ro.build.version.release': 8.0.0
+2019-02-27 15:11:51:185 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell wm size'
+2019-02-27 15:11:51:551 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.product.model'
+2019-02-27 15:11:51:604 [ADB] Current device property 'ro.product.model': MHA-AL00
+2019-02-27 15:11:51:604 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.product.manufacturer'
+2019-02-27 15:11:51:653 [ADB] Current device property 'ro.product.manufacturer': HUAWEI
+2019-02-27 15:11:51:654 [ADB] Getting install status for com.xueqiu.android
+2019-02-27 15:11:51:654 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package com.xueqiu.android'
+2019-02-27 15:11:51:714 [ADB] 'com.xueqiu.android' is installed
+2019-02-27 15:11:51:714 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am force-stop com.xueqiu.android'
+2019-02-27 15:11:51:881 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm clear com.xueqiu.android'
+2019-02-27 15:11:52:310 [ADB] Device API level: 26
+2019-02-27 15:11:52:310 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package com.xueqiu.android'
+2019-02-27 15:11:52:383 [ADB] Retrieving requested permissions
+2019-02-27 15:11:52:384 [ADB] Retrieved 34 permission(s) from ["requested"] group(s)
+2019-02-27 15:11:52:384 [ADB] Retrieving granted permissions
+2019-02-27 15:11:52:385 [ADB] Retrieved 12 permission(s) from ["install","runtime"] group(s)
+2019-02-27 15:11:52:385 [ADB] Granting permissions ["android.permission.WRITE_EXTERNAL_STORAGE","android.permission.READ_PHONE_STATE","android.permission.ACCESS_FINE_LOCATION","android.permission.ACCESS_COARSE_LOCATION","android.permission.READ_EXTERNAL_STORAGE","android.permission.RECORD_AUDIO","android.permission.CAMERA","android.permission.REQUEST_INSTALL_PACKAGES","android.permission.MOUNT_UNMOUNT_FILESYSTEMS","android.permission.CALL_PHONE"] to 'com.xueqiu.android'
+2019-02-27 15:11:52:385 [ADB] Got the following command chunks to execute: [["pm","grant","com.xueqiu.android","android.permission.WRITE_EXTERNAL_STORAGE",";","pm","grant","com.xueqiu.android","android.permission.READ_PHONE_STATE",";","pm","grant","com.xueqiu.android","android.permission.ACCESS_FINE_LOCATION",";","pm","grant","com.xueqiu.android","android.permission.ACCESS_COARSE_LOCATION",";","pm","grant","com.xueqiu.android","android.permission.READ_EXTERNAL_STORAGE",";","pm","grant","com.xueqiu.android","android.permission.RECORD_AUDIO",";","pm","grant","com.xueqiu.android","android.permission.CAMERA",";","pm","grant","com.xueqiu.android","android.permission.REQUEST_INSTALL_PACKAGES",";","pm","grant","com.xueqiu.android","android.permission.MOUNT_UNMOUNT_FILESYSTEMS",";","pm","grant","com.xueqiu.android","android.permission.CALL_PHONE",";"]]
+2019-02-27 15:11:52:385 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm grant com.xueqiu.android android.permission.WRITE_EXTERNAL_STORAGE \; pm grant com.xueqiu.android android.permission.READ_PHONE_STATE \; pm grant com.xueqiu.android android.permission.ACCESS_FINE_LOCATION \; pm grant com.xueqiu.android android.permission.ACCESS_COARSE_LOCATION \; pm grant com.xueqiu.android android.permission.READ_EXTERNAL_STORAGE \; pm grant com.xueqiu.android android.permission.RECORD_AUDIO \; pm grant com.xueqiu.android android.permission.CAMERA \; pm grant com.xueqiu.android android.permission.REQUEST_INSTALL_PACKAGES \; pm grant com.xueqiu.android android.permission.MOUNT_UNMOUNT_FILESYSTEMS \; pm grant com.xueqiu.android android.permission.CALL_PHONE \;'
+2019-02-27 15:11:55:661 [ADB] Forwarding system: 4724 to device: 4724
+2019-02-27 15:11:55:662 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 forward tcp\:4724 tcp\:4724'
+2019-02-27 15:11:55:688 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 push C\:\\Users\\21422\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-driver\\bootstrap\\bin\\AppiumBootstrap.jar /data/local/tmp/'
+2019-02-27 15:11:55:732 [ADB] Attempting to kill all uiautomator processes
+2019-02-27 15:11:55:732 [ADB] Getting all processes with uiautomator
+2019-02-27 15:11:55:732 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ps'
+2019-02-27 15:11:55:856 [ADB] No 'uiautomator' process has been found
+2019-02-27 15:11:55:856 [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","GWY0217207001917","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.xueqiu.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2019-02-27 15:11:56:319 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys window'
+2019-02-27 15:11:56:383 [ADB] Device API level: 26
+2019-02-27 15:11:56:384 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am start -W -n com.xueqiu.android/.view.WelcomeActivityAlias -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+2019-02-27 15:12:37:628 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ime set com.baidu.input_huawei/.ImeService'
+2019-02-27 15:12:38:035 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am force-stop com.xueqiu.android'
+2019-02-27 15:12:38:170 [ADB] Pressing the HOME button
+2019-02-27 15:12:38:171 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell input keyevent 3'
+2019-02-27 15:12:38:586 [ADB] Attempting to kill all uiautomator processes
+2019-02-27 15:12:38:586 [ADB] Getting all processes with uiautomator
+2019-02-27 15:12:38:586 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ps'
+2019-02-27 15:12:38:692 [ADB] No 'uiautomator' process has been found
+2019-02-27 15:12:38:696 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am force-stop io.appium.unlock'
+
