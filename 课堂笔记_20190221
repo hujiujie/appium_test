@@ -1,0 +1,216 @@
+新手入门:推荐 appium-destop  内嵌了appium-sever 和 inspector工具
+下载地址:https://github.com/appium/appium-desktop/releases
+win下载exe文件;mac下载dmg格式文件
+
+资料:
+appium desktop安装--- https://github.com/appium/appium-desktop/releases
+sdk与android studio安装-- https://developer.android.com/studio/?hl=zh-cn#downloads
+scrcpy 手机投屏到电脑上  ----https://github.com/Genymobile/scrcpy    
+capability --------https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md
+appium官方提供的示例代码 https://github.com/appium/appium/blob/master/sample-code/
+页面源代码验证xpath匹配--------https://www.freeformatter.com/xml-validator-xsd.html
+
+电脑通过数据线连接安卓设备,安卓手机需要设置--系统--开发者选项-打开usb调试模式; 或者在设置-系统-关于手机--版本号行 连续点击7次 变成开发者模式.
+
+常用的adb命令:
+adb devices  查看连接的设备
+adb logcat   查看日志
+adb logcat | grep -i xueqiu  查看雪球apk的日志
+# 获取包名和anctivity方法一
+adb logcat | grep -i displayed  输入这条命令,手动点击下雪球app,就可以看到屏幕上有log日志输出,从中找出雪球app的 报名和anctivity
+                                每个页面的anctivity是不一样  #  com.bussinesscloud/.ui.splash.SplashActivity
+# 获取包名和anctivity方法二
+adb shell dumpsys activity activities top |less  
+
+adb shell am start -W -S -n  com.bussinesscloud/.ui.splash.SplashActivity  启动商会云app,-W表示等等app加载完成 -S 先杀掉商会云app进程 -n 表示
+
+uiautomatorviewer定位元素不能与appium同时使用
+
+定位技巧:
+常见的定位策略
+id (resource-id)
+accessibilityId (content-desc)
+xpath 全能支持
+
+定位示例:
+com.xueqiu.android:id/storage_permission_name
+storage_permission_name
+//*[@text='开启']
+//*[contains(@text, '手机')]   
+
+自定义控件识别:
+基本定位
+父控件定位+百分比定位
+图像识别 https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/image-comparison.md
+ocr 图形文字识别
+
+--------------------------------------------------------------------------------------------
+gitbash命令:
+which adb   查看adb环境安装路径
+echo $PATH   输出系统环境变量
+21422@LAPTOP-L6CMPNFQ MINGW64 ~
+$ adb --version
+Android Debug Bridge version 1.0.40
+Version 4986621
+Installed as D:\android\android-sdk-windows\platform-tools\adb.exe
+
+21422@LAPTOP-L6CMPNFQ MINGW64 ~
+$ adb
+Android Debug Bridge version 1.0.40
+Version 4986621
+Installed as D:\android\android-sdk-windows\platform-tools\adb.exe
+
+global options:
+ -a         listen on all network interfaces, not just localhost
+ -d         use USB device (error if multiple devices connected)
+ -e         use TCP/IP device (error if multiple TCP/IP devices available)
+ -s SERIAL  use device with given serial (overrides $ANDROID_SERIAL)
+ -t ID      use device with given transport id
+ -H         name of adb server host [default=localhost]
+ -P         port of adb server [default=5037]
+ -L SOCKET  listen on given socket for adb server [default=tcp:localhost:5037]
+
+general commands:
+ devices [-l]             list connected devices (-l for long output)
+ help                     show this help message
+ version                  show version num
+
+networking:
+ connect HOST[:PORT]      connect to a device via TCP/IP [default port=5555]
+ disconnect [HOST[:PORT]]
+     disconnect from given TCP/IP device [default port=5555], or all
+ forward --list           list all forward socket connections
+ forward [--no-rebind] LOCAL REMOTE
+     forward socket connection using:
+       tcp:<port> (<local> may be "tcp:0" to pick any open port)
+       localabstract:<unix domain socket name>
+       localreserved:<unix domain socket name>
+       localfilesystem:<unix domain socket name>
+       dev:<character device name>
+       jdwp:<process pid> (remote only)
+ forward --remove LOCAL   remove specific forward socket connection
+ forward --remove-all     remove all forward socket connections
+ ppp TTY [PARAMETER...]   run PPP over USB
+ reverse --list           list all reverse socket connections from device
+ reverse [--no-rebind] REMOTE LOCAL
+     reverse socket connection using:
+       tcp:<port> (<remote> may be "tcp:0" to pick any open port)
+       localabstract:<unix domain socket name>
+       localreserved:<unix domain socket name>
+       localfilesystem:<unix domain socket name>
+ reverse --remove REMOTE  remove specific reverse socket connection
+ reverse --remove-all     remove all reverse socket connections from device
+
+file transfer:
+ push [--sync] LOCAL... REMOTE
+     copy local files/directories to device
+     --sync: only push files that are newer on the host than the device
+ pull [-a] REMOTE... LOCAL
+     copy files/dirs from device
+     -a: preserve file timestamp and mode
+ sync [all|data|odm|oem|product|system|vendor]
+     sync a local build from $ANDROID_PRODUCT_OUT to the device (default all)
+     -l: list but don't copy
+
+shell:
+ shell [-e ESCAPE] [-n] [-Tt] [-x] [COMMAND...]
+     run remote shell command (interactive shell if no command given)
+     -e: choose escape character, or "none"; default '~'
+     -n: don't read from stdin
+     -T: disable PTY allocation
+     -t: force PTY allocation
+     -x: disable remote exit codes and stdout/stderr separation
+ emu COMMAND              run emulator console command
+
+app installation:
+ install [-lrtsdg] [--instant] PACKAGE
+ install-multiple [-lrtsdpg] [--instant] PACKAGE...
+     push package(s) to the device and install them
+     -l: forward lock application
+     -r: replace existing application
+     -t: allow test packages
+     -s: install application on sdcard
+     -d: allow version code downgrade (debuggable packages only)
+     -p: partial application install (install-multiple only)
+     -g: grant all runtime permissions
+     --instant: cause the app to be installed as an ephemeral install app
+ uninstall [-k] PACKAGE
+     remove this app package from the device
+     '-k': keep the data and cache directories
+
+backup/restore:
+   to show usage run "adb shell bu help"
+
+debugging:
+ bugreport [PATH]
+     write bugreport to given PATH [default=bugreport.zip];
+     if PATH is a directory, the bug report is saved in that directory.
+     devices that don't support zipped bug reports output to stdout.
+ jdwp                     list pids of processes hosting a JDWP transport
+ logcat                   show device log (logcat --help for more)
+
+security:
+ disable-verity           disable dm-verity checking on userdebug builds
+ enable-verity            re-enable dm-verity checking on userdebug builds
+ keygen FILE
+     generate adb public/private key; private key stored in FILE,
+     public key stored in FILE.pub (existing files overwritten)
+
+scripting:
+ wait-for[-TRANSPORT]-STATE
+     wait for device to be in the given state
+     State: device, recovery, sideload, or bootloader
+     Transport: usb, local, or any [default=any]
+ get-state                print offline | bootloader | device
+ get-serialno             print <serial-number>
+ get-devpath              print <device-path>
+ remount                  remount partitions read-write
+ reboot [bootloader|recovery|sideload|sideload-auto-reboot]
+     reboot the device; defaults to booting system image but
+     supports bootloader and recovery too. sideload reboots
+     into recovery and automatically starts sideload mode,
+     sideload-auto-reboot is the same but reboots after sideloading.
+ sideload OTAPACKAGE      sideload the given full OTA package
+ root                     restart adbd with root permissions
+ unroot                   restart adbd without root permissions
+ usb                      restart adb server listening on USB
+ tcpip PORT               restart adb server listening on TCP on PORT
+
+internal debugging:
+ start-server             ensure that there is a server running
+ kill-server              kill the server if it is running
+ reconnect                kick connection from host side to force reconnect
+ reconnect device         kick connection from device side to force reconnect
+ reconnect offline        reset offline/unauthorized devices to force reconnect
+
+environment variables:
+ $ADB_TRACE
+     comma-separated list of debug info to log:
+     all,adb,sockets,packets,rwx,usb,sync,sysdeps,transport,jdwp
+ $ADB_VENDOR_KEYS         colon-separated list of keys (files or directories)
+ $ANDROID_SERIAL          serial number to connect to (see -s)
+ $ANDROID_LOG_TAGS        tags to be used by logcat (see logcat --help)
+
+
+           
+                                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
