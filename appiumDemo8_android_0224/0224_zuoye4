@@ -46,10 +46,15 @@ awk '$3=="[ADB]"' appium0227.log >adb.log
 2019-02-27 15:11:49:258 [ADB] 1 device(s) connected
 # 设置设备id
 2019-02-27 15:11:49:260 [ADB] Setting device id to GWY0217207001917
+# 获取安卓设备系统 api 版本（通过端口 5037
 2019-02-27 15:11:49:261 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.build.version.sdk'
+# 当前设备属性'ro.build.version.sdk': 26
 2019-02-27 15:11:49:336 [ADB] Current device property 'ro.build.version.sdk': 26
+# 设备API版本：26
 2019-02-27 15:11:49:336 [ADB] Device API level: 26
+# 查看当前设备app应用包
 2019-02-27 15:11:49:337 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm list packages com.xueqiu.android'
+# 
 2019-02-27 15:11:49:854 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 wait-for-device'
 2019-02-27 15:11:49:882 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell echo ping'
 2019-02-27 15:11:49:932 [ADB] Getting install status for io.appium.settings
