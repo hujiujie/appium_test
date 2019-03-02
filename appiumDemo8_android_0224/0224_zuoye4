@@ -7,24 +7,31 @@ awk '$3=="[ADB]"' appium0227.log >adb.log
 
 # 检查adb是否存在
 2019-02-27 15:11:49:219 [ADB] Checking whether adb is present
+
 # '在D盘sdk目录下找到29个build-tools文件夹
 2019-02-27 15:11:49:225 [ADB] Found 29 'build-tools' folders under 'D:\android\android-sdk-windows' (newest first):
 2019-02-27 15:11:49:225 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.3
 2019-02-27 15:11:49:225 [ADB]     D:/android/android-sdk-windows/build-tools/28.0.2
+
 # 使用sdk目录下的adb执行程序
 2019-02-27 15:11:49:230 [ADB] Using adb.exe from D:\android\android-sdk-windows\platform-tools\adb.exe
+
 # 尝试找到一个连接的android设备
 2019-02-27 15:11:49:230 [ADB] Trying to find a connected android device
+
 # 获取连接设备
 2019-02-27 15:11:49:231 [ADB] Getting connected devices...
+
 # 1个设备已连接
 2019-02-27 15:11:49:258 [ADB] 1 device(s) connected
 # 设置设备id
 2019-02-27 15:11:49:260 [ADB] Setting device id to GWY0217207001917
+
 # 获取安卓设备系统 api 版本（通过端口 5037），并输出api版本号
 2019-02-27 15:11:49:261 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.build.version.sdk'
 2019-02-27 15:11:49:336 [ADB] Current device property 'ro.build.version.sdk': 26
 2019-02-27 15:11:49:336 [ADB] Device API level: 26
+
 # 查看当前设备上是否安装了雪球app
 2019-02-27 15:11:49:337 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm list packages com.xueqiu.android'
 # 等待设备可用
@@ -33,10 +40,13 @@ awk '$3=="[ADB]"' appium0227.log >adb.log
 2019-02-27 15:11:49:882 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell echo ping'
 # 检查appium是否安装
 2019-02-27 15:11:49:932 [ADB] Getting install status for io.appium.settings
+
+
 # 运行 adb shell dumpsys 命令获取包的安装状态
 # io.appium.settings 已安装
 2019-02-27 15:11:49:932 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package io.appium.settings'
 2019-02-27 15:11:50:017 [ADB] 'io.appium.settings' is installed
+
 # 获取io.appium.settings 包的信息
 2019-02-27 15:11:50:018 [ADB] Getting package info for 'io.appium.settings'
 # 通过命令shell dumpsys package io.appium.settings获取
@@ -45,47 +55,61 @@ awk '$3=="[ADB]"' appium0227.log >adb.log
 2019-02-27 15:11:50:082 [ADB] Checking whether aapt is present
 # 应用文件下的aapt命令执行
 2019-02-27 15:11:50:083 [ADB] Using aapt.exe from D:\android\android-sdk-windows\build-tools\28.0.3\aapt.exe
+
 # io.appium.settings版本信息符合要求
 2019-02-27 15:11:50:099 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('2.11.0' >= '2.11.0')
-# 不要重新安装或升级 io.appium.settings
+# 不需要重新安装或升级 io.appium.settings
 2019-02-27 15:11:50:099 [ADB] There is no need to install/upgrade 'C:\Users\21422\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk'
+
 # 查看所有的进程状态
 2019-02-27 15:11:50:100 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ps'
 2019-02-27 15:11:50:211 [ADB] Device API level: 26
+
 # 给与io.appium.settings权限
 2019-02-27 15:11:50:211 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell appops set io.appium.settings android\:mock_location allow'
+
 # 获取系统默认输入法
 2019-02-27 15:11:50:332 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell settings get secure default_input_method'
+
 # 激活系统安装时的输入法
 2019-02-27 15:11:50:400 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ime enable io.appium.settings/.UnicodeIME'
+
 # 设置appium输入法位系统安装时的输入法
 2019-02-27 15:11:50:782 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ime set io.appium.settings/.UnicodeIME'
 
 # 获取设备平台版本
 2019-02-27 15:11:51:146 [ADB] Getting device platform version
+
 # 获取设备的android系统版本  版本是8.0.0
 2019-02-27 15:11:51:146 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.build.version.release'
 2019-02-27 15:11:51:184 [ADB] Current device property 'ro.build.version.release': 8.0.0
+
 # 获取设备的屏幕尺寸 
 2019-02-27 15:11:51:185 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell wm size'
+
 # 获取设备型号  MHA-AL00
 2019-02-27 15:11:51:551 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.product.model'
 2019-02-27 15:11:51:604 [ADB] Current device property 'ro.product.model': MHA-AL00
+
 # 获取设备生产厂商  华为
 2019-02-27 15:11:51:604 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell getprop ro.product.manufacturer'
 2019-02-27 15:11:51:653 [ADB] Current device property 'ro.product.manufacturer': HUAWEI
+
 # 获取雪球app安装状态
 2019-02-27 15:11:51:654 [ADB] Getting install status for com.xueqiu.android
 # 运行 adb shell dumpsys 命令获取包的安装状态
 2019-02-27 15:11:51:654 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package com.xueqiu.android'
 # 雪球已安装
 2019-02-27 15:11:51:714 [ADB] 'com.xueqiu.android' is installed
+
 # 停止雪球应用
 2019-02-27 15:11:51:714 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am force-stop com.xueqiu.android'
+
 # 清除雪球应该数据
 2019-02-27 15:11:51:881 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm clear com.xueqiu.android'
 2019-02-27 15:11:52:310 [ADB] Device API level: 26
 2019-02-27 15:11:52:310 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys package com.xueqiu.android'
+
 # 检索请求权限
 2019-02-27 15:11:52:383 [ADB] Retrieving requested permissions
 # 检索到34个权限
@@ -100,34 +124,46 @@ awk '$3=="[ADB]"' appium0227.log >adb.log
 2019-02-27 15:11:52:385 [ADB] Got the following command chunks to execute: [["pm","grant","com.xueqiu.android","android.permission.WRITE_EXTERNAL_STORAGE",";","pm","grant","com.xueqiu.android","android.permission.READ_PHONE_STATE",";","pm","grant","com.xueqiu.android","android.permission.ACCESS_FINE_LOCATION",";","pm","grant","com.xueqiu.android","android.permission.ACCESS_COARSE_LOCATION",";","pm","grant","com.xueqiu.android","android.permission.READ_EXTERNAL_STORAGE",";","pm","grant","com.xueqiu.android","android.permission.RECORD_AUDIO",";","pm","grant","com.xueqiu.android","android.permission.CAMERA",";","pm","grant","com.xueqiu.android","android.permission.REQUEST_INSTALL_PACKAGES",";","pm","grant","com.xueqiu.android","android.permission.MOUNT_UNMOUNT_FILESYSTEMS",";","pm","grant","com.xueqiu.android","android.permission.CALL_PHONE",";"]]
 #
 2019-02-27 15:11:52:385 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell pm grant com.xueqiu.android android.permission.WRITE_EXTERNAL_STORAGE \; pm grant com.xueqiu.android android.permission.READ_PHONE_STATE \; pm grant com.xueqiu.android android.permission.ACCESS_FINE_LOCATION \; pm grant com.xueqiu.android android.permission.ACCESS_COARSE_LOCATION \; pm grant com.xueqiu.android android.permission.READ_EXTERNAL_STORAGE \; pm grant com.xueqiu.android android.permission.RECORD_AUDIO \; pm grant com.xueqiu.android android.permission.CAMERA \; pm grant com.xueqiu.android android.permission.REQUEST_INSTALL_PACKAGES \; pm grant com.xueqiu.android android.permission.MOUNT_UNMOUNT_FILESYSTEMS \; pm grant com.xueqiu.android android.permission.CALL_PHONE \;'
+
+
 # 正在将 uiautomator2 server 的 4724 端口映射到电脑中
 # 重定向tcp端口（由于使用的默认端口，这里实际没有变化）
 2019-02-27 15:11:55:661 [ADB] Forwarding system: 4724 to device: 4724
 2019-02-27 15:11:55:662 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 forward tcp\:4724 tcp\:4724'
+
 # 将 AppiumBootstrap.jar 传到安卓设备中
 2019-02-27 15:11:55:688 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 push C\:\\Users\\21422\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-driver\\bootstrap\\bin\\AppiumBootstrap.jar /data/local/tmp/'
+
 # 正在试图杀死所有的uiautomator进程
 2019-02-27 15:11:55:732 [ADB] Attempting to kill all uiautomator processes
 # 正在获取所有uiautomator的进程
 2019-02-27 15:11:55:732 [ADB] Getting all processes with uiautomator
+
 # 输出所有进程 ps表示进程
 2019-02-27 15:11:55:732 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ps'
 # 没找到uiautomator 进程
 2019-02-27 15:11:55:856 [ADB] No 'uiautomator' process has been found
+
 # 创建adb子进程
 2019-02-27 15:11:55:856 [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","GWY0217207001917","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.xueqiu.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+
 # 此处是appium用来判断是否锁屏的，检查返回的mShowingLockscreen（mShowingLockscreen=true，锁屏，需要解锁）
 2019-02-27 15:11:56:319 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell dumpsys window'
 2019-02-27 15:11:56:383 [ADB] Device API level: 26
+
 # 启动雪球APP
 2019-02-27 15:11:56:384 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am start -W -n com.xueqiu.android/.view.WelcomeActivityAlias -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+
 # 恢复手机输入法为百度输入法
 2019-02-27 15:12:37:628 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ime set com.baidu.input_huawei/.ImeService'
+
 # 停止雪球应用
 2019-02-27 15:12:38:035 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am force-stop com.xueqiu.android'
+
 # 按下home键  keyevent指的是android对应的keycode，比如home键的keycode=3，back键的keycode=4.
 2019-02-27 15:12:38:170 [ADB] Pressing the HOME button
 2019-02-27 15:12:38:171 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell input keyevent 3'
+
 # 正在试图杀死所有的uiautomator进程
 # 获取所有uiautomator的进程
 # 输出所有进程 ps表示进程
@@ -136,6 +172,7 @@ awk '$3=="[ADB]"' appium0227.log >adb.log
 2019-02-27 15:12:38:586 [ADB] Getting all processes with uiautomator
 2019-02-27 15:12:38:586 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell ps'
 2019-02-27 15:12:38:692 [ADB] No 'uiautomator' process has been found
+
 # 强制关闭unlock App
 2019-02-27 15:12:38:696 [ADB] Running 'D:\android\android-sdk-windows\platform-tools\adb.exe -P 5037 -s GWY0217207001917 shell am force-stop io.appium.unlock'
 
