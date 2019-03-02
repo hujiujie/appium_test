@@ -11,10 +11,11 @@ cnpm install -g appium
 
 
 appium命令：
+https://testerhome.com/topics/2565
 appium --help   查看appium帮助
 appium          启动appium
 appium -g appium.log  启动appium并输出log日志，log日志存在当前目录下 -g表示打log
-./node_modules/appium/build/lib/main.js   #appium的启动原理，实际是在appium的安装目录下运行这个文件
+./node_modules/appium/build/lib/main.js   #appium的启动原理，实际是在appium的安装目录下运行这个文件，即执行这个文件也会启动appium
 
 hujiujie@DESKTOP-U6RU7CF MINGW64 ~
 $ which appium
@@ -38,6 +39,42 @@ hujiujie@DESKTOP-U6RU7CF MINGW64 ~/AppData/Roaming/npm
 $ ./node_modules/appium/build/lib/main.js
 [Appium] Welcome to Appium v1.10.0
 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
+----------------------------------
+
+adb shell pm list packages  #列出设备上所有的app应用
+adb shell pm list packages com.xueqiu.android  #检查当前设备上是否安装了雪球app
+adb shell getprop ro.build.version.sdk  # 获取设备系统的api版本号  26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
