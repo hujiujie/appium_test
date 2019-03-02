@@ -2,8 +2,45 @@
 课堂帖子地址：
 https://testerhome.com/topics/18261
 
-appium server安装
+appium server安装：
 https://testerhome.com/topics/6040
+#查询最近更新版本
+npm view appium versions --json  
+#使用淘宝提供的cnpm工具安装
+cnpm install -g appium
+
+
+appium命令：
+appium --help   查看appium帮助
+appium          启动appium
+appium -g appium.log  启动appium并输出log日志，log日志存在当前目录下 -g表示打log
+./node_modules/appium/build/lib/main.js   #appium的启动原理，实际是在appium的安装目录下运行这个文件
+
+hujiujie@DESKTOP-U6RU7CF MINGW64 ~
+$ which appium
+/c/Users/hujiujie/AppData/Roaming/npm/appium
+hujiujie@DESKTOP-U6RU7CF MINGW64 ~
+$ cd AppData
+hujiujie@DESKTOP-U6RU7CF MINGW64 ~/AppData
+$ cd Roaming/
+hujiujie@DESKTOP-U6RU7CF MINGW64 ~/AppData/Roaming
+$ cd npm
+hujiujie@DESKTOP-U6RU7CF MINGW64 ~/AppData/Roaming/npm
+$ ll
+total 8
+-rwxr-xr-x 1 hujiujie 197121 339 12月 13 14:17 appium*
+-rw-r--r-- 1 hujiujie 197121 216 12月 13 14:17 appium.cmd
+-rwxr-xr-x 1 hujiujie 197121 351 12月 13 09:41 appium-doctor*
+-rw-r--r-- 1 hujiujie 197121 228 12月 13 09:41 appium-doctor.cmd
+drwxr-xr-x 1 hujiujie 197121   0 12月 13 14:19 node_modules/
+
+hujiujie@DESKTOP-U6RU7CF MINGW64 ~/AppData/Roaming/npm
+$ ./node_modules/appium/build/lib/main.js
+[Appium] Welcome to Appium v1.10.0
+[Appium] Appium REST http interface listener started on 0.0.0.0:4723
+
+
+
 
 
 
