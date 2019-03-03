@@ -1,8 +1,11 @@
 # coding = utf-8
+from time import sleep
+
 import pytest
 import unittest
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class TestXueqiu(unittest.TestCase):
@@ -11,13 +14,13 @@ class TestXueqiu(unittest.TestCase):
     def setUp(self):
         print("setup")
         caps = {"platformName": "Android",
-                "deviceName": "demo",
+                "deviceName": "GWY0217207001917",
                 "appPackage": "com.xueqiu.android",
                 "appActivity": ".view.WelcomeActivityAlias",
                 "autoGrantPermissions": True,  # 权限弹窗关闭
                 "unicodeKeyboard": True,  # 支持中文输入
                 "resetKeyboard": True,  # 键盘恢复
-                "automationName":"UiAutomator2"
+                "automationName": "UiAutomator2"
                 }
 
         if TestXueqiu.loaded == True:
@@ -141,7 +144,6 @@ class TestXueqiu(unittest.TestCase):
     # 作业3 0224
     # 添加一只美股，判断是否添加成功 test_add_us
     # 然后删除一只美股，判断删除成功 test_delete_us
-    # 利用参数化或者数据驱动添加30只股票 test_add_batch
 
     def test_add_us(self):
         self.loaded_zixuan()
@@ -173,14 +175,6 @@ class TestXueqiu(unittest.TestCase):
 
         assert 1 == len(self.driver.find_elements_by_id("add_to_portfolio_stock"))
 
-    # 添加10只美股，当全部股票大于2页的时候断言某个股票同时存在于“美股”与“全部”分类中 test_exist_in_all
-    def test_exist_in_all(self):
-        # 每股 :特斯拉 苹果 汽车之家 百度 谷歌C  陌陌  优信 阿里巴巴 聚美优品  拼多多
-        self.load_zixuan()
-        self.driver.find_element_by_xpath("//*[@text='自选' and contains(@resource-id, 'tab_name')]").click()
-        self.driver.find_element_by_xpath("//*[@text='美股']").click()
-        if len(self.driver.find_elements_by_id("add_to_portfolio_stock")) > 0:
-            self.driver.find_element_by_id("add_to_portfolio_stock").click()
 
     def test_mobile(self):
         # self.driver.start_activity("com.android.calculator2",".Calculator")
@@ -197,14 +191,49 @@ class TestXueqiu(unittest.TestCase):
             self.driver.swipe(start_x=500, start_y=1000, end_x=500, end_y=600, duration=1000)
 
         for i in range(5):
-        #左右滑动
+            # 左右滑动
             self.driver.swipe(start_x=800, start_y=1200, end_x=200, end_y=1200, duration=1000)
 
     def test_battery(self):
         print(self.driver.execute_script("mobile:batteryInfo"))  # 打印耗电量
 
     def test_shell(self):
-        self.driver.execute_script("mobile:shell",{"command": "am", "args": ["start", "-n", "com.android.calculator2/.Calculator"]})
+        # 调用shell命令  启动计算器应用
+        self.driver.execute_script("mobile:shell",
+                                   {"command": "am", "args": ["start", "-n", "com.android.calculator2/.Calculator"]})
+
+    def test_webview_sim_image(self):
+        self.loaded_zixuan()
+        self.driver.find_element_by_xpath("//*[@text='交易']").click()
+        # 场景：定位图片，他的class是image ，content-desc =15da75b0b28c2b23feda8fe7    定位到之后，触发点击
+        self.driver.find_element_by_accessibility_id("15da75b0b28c2b23feda8fe7").click()
+        self.driver.save_screenshot("screenhot/jiaoyi_1.png")
+
+    def test_webview_sim_h5(self):
+
+        self.loaded_zixuan()
+        self.driver.find_element_by_xpath("//*[@text='交易']").click()
+        # 页面没有加载完成 用webdriver等待下 ，直到某个元素出现
+        WebDriverWait.until()
+        for i in range(10):
+            sleep(0.5)
+            print(self.driver.contexts)
+            print(self.driver.current_context)
+
+
+    # 作业3 交易 -> 基金 -> 已有蛋卷基金账户登录 -> 使用密码登陆 -> 输入用户名密码 -> 登录
+    def test_webview_sim_h5_zuoye(self):
+        self.loaded_zixuan()
+        self.driver.find_element_by_xpath("//*[@text='交易']").click()
+        self.driver.find_element_by_xpath("//*[@text='基金']").click()
+        self.driver.find_element_by_accessibility_id("已有蛋卷基金账户登录").click()
+        self.driver.find_element_by_accessibility_id("使用密码登录").click()
+        # 输入手机号和密码，点击登录
+        self.driver.find_element_by_id("telno").send_keys("18810054187")
+        self.driver.find_element_by_id("pass").send_keys("666666")
+        self.driver.save_screenshot("screenhot/danjuanlogin.png")
+        self.driver.find_element_by_id("next").click()
+
 
 
     def tearDown(self):
