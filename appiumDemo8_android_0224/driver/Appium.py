@@ -1,32 +1,25 @@
 # coding=utf-8
-
-import pytest
-import unittest
-from appium import webdriver
-from appium.webdriver.common.touch_action import TouchAction
-from selenium.webdriver.support.wait import WebDriverWait
+from appium.webdriver import webdriver
 
 
 class Appium(object):
+    driver = None
 
+    @classmethod
+    def getDriver(cls):
+        return cls.driver
 
-    loaded = False
-
-    def setUp(self):
-        print("setup")
+    @classmethod
+    def initDriver(cls):
         caps = {"platformName": "Android",
                 "deviceName": "GWY0217207001917",
                 "appPackage": "com.xueqiu.android",
                 "appActivity": ".view.WelcomeActivityAlias",
-                "autoGrantPermissions": True,  # 权限弹窗关闭
-                "unicodeKeyboard": True,  # 支持中文输入
-                "resetKeyboard": True,  # 键盘恢复
-                "automationName": "UiAutomator2"
+                "autoGrantPermissions": True,
+                "unicodeKeyboard": True,
+                "resetKeyboard": True,
                 }
 
-        if Appium.loaded == True:
-            caps["noReset"] == "true"
+        cls.driver = webdriver.RemoteFS("http://localhost:4723/wd/hub", caps)
+        cls.driver.implicitly_wait(10)
 
-        self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
-        self.driver.implicitly_wait(10)  # 隐式等待
-        loaded = True
