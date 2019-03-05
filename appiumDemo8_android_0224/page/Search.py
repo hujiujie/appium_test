@@ -14,5 +14,5 @@ class Search(object):
         return self
     # 获取股票名称
     def get_stock(self):
-        stock_name = Appium.getDriver().find_element_by_id("stock_name").text()
+        stock_name = Appium.getDriver().find_element_by_id("stockName").text
         return stock_name

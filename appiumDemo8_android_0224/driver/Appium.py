@@ -1,5 +1,5 @@
 # coding=utf-8
-from appium.webdriver import webdriver
+from appium import webdriver
 
 
 class Appium(object):
@@ -20,6 +20,6 @@ class Appium(object):
                 "resetKeyboard": True,
                 }
 
-        cls.driver = webdriver.RemoteFS("http://localhost:4723/wd/hub", caps)
+        cls.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
         cls.driver.implicitly_wait(10)
 
