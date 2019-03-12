@@ -1,1 +1,11 @@
-{}
+{
+  "test_portfolio.py::TestPortfolio::()::test_stocks_add": true,
+  "test_xueqiu_1.py::TestXueqiu1::()": true,
+  "test_xueqiu_1.py::TestXueqiu1::()::test_add_stocks[\\u62fc\\u591a\\u591a]": true,
+  "test_xueqiu_1.py::TestXueqiu1::()::test_add_stocks[\\u767e\\u5ea6]": true,
+  "test_xueqiu_1.py::TestXueqiu1::()::test_add_stocks[\\u817e\\u8baf]": true,
+  "test_xueqiu_1.py::TestXueqiu1::()::test_add_stocks[\\u963f\\u91cc\\u5df4\\u5df4]": true,
+  "test_xueqiu_1.py::TestXueqiu1::test_add_stocks": true,
+  "test_xueqiu_1.py::TestXueqiu::()::test_search_username": true,
+  "test_xueqiu_1.py::TestXueqiu::test_search": true
+}
