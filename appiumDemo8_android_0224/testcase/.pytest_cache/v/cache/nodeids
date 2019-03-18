@@ -1,3 +1,9 @@
 [
-  "test_portfolio.py::TestPortfolio::()::test_stocks_add"
+  "test_stock_group.py::TestStockGroup::()::test_add_group[1]",
+  "test_stock_group.py::TestStockGroup::()::test_add_group[demo]",
+  "test_stock_group.py::TestStockGroup::()::test_add_group[\\u4e2d\\u6587\\u540d]",
+  "test_stock_group.py::TestStockGroup::()::test_add_group[\\u7a7a \\u683c]",
+  "test_stock_group.py::TestStockGroup::()::test_delete_group",
+  "test_stock_group.py::TestStockGroup::()::test_add_stock",
+  "test_stock_group.py::TestStockGroup::()::test_delete_stock"
 ]

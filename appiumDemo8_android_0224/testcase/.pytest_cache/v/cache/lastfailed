@@ -1,5 +1,8 @@
 {
+  "test_portfolio.py::TestPortfolio::()::test_add": true,
+  "test_portfolio.py::TestPortfolio::()::test_delete": true,
   "test_portfolio.py::TestPortfolio::()::test_stocks_add": true,
+  "test_stock_group.py::TestStockGroup::()::test_add_group[\\u7a7a \\u683c]": true,
   "test_xueqiu_1.py::TestXueqiu1::()": true,
   "test_xueqiu_1.py::TestXueqiu1::()::test_add_stocks[\\u62fc\\u591a\\u591a]": true,
   "test_xueqiu_1.py::TestXueqiu1::()::test_add_stocks[\\u767e\\u5ea6]": true,

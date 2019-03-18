@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="dd3c0aa7-ae6d-40c7-adf1-ebe972635358" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/driver/Appium.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/driver/Appium.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/page/Homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/page/homepage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/page/Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/.idea/appiumDemo8_android_0224.iml" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/.idea/appiumDemo8_android_0224.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/page/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/page/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/.pytest_cache/v/cache/lastfailed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_xueqiu_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_xueqiu_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+            <state relative-caret-position="-216">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
                 <element signature="e#29#82#0" expanded="true" />
               </folding>
@@ -31,70 +34,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/homepage.py">
+        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/stock_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="605">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
-                <element signature="e#31#74#0" expanded="true" />
+                <element signature="e#15#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_xueqiu_1.py">
+        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_stock_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="77">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
-                <element signature="e#17#30#0" expanded="true" />
+                <element signature="e#15#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/driver/Appium.py">
+        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/StockGroupTestBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="96">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="24" />
               <folding>
-                <element signature="e#15#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/portfolio.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding>
-                <element signature="e#21#64#0" expanded="true" />
+                <element signature="e#15#72#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/base_page.py">
+        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="197">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="24" />
               <folding>
-                <element signature="e#17#56#0" expanded="true" />
+                <element signature="e#16#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../pythonproject/venv/Lib/site-packages/appium/webdriver/webdriver.py">
+        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/PortfolioTestBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="192" column="8" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
+            <state relative-caret-position="288">
+              <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding>
+                <element signature="e#15#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,23 +96,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="-297">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding>
-                <element signature="e#15#58#0" expanded="true" />
+                <element signature="e#15#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py">
+        <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/homepage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#16#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -150,16 +141,21 @@
         <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/Search.py" />
         <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/portfolio.py" />
         <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/homepage.py" />
-        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py" />
-        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py" />
         <option value="$PROJECT_DIR$/appiumDemo8_android_0224/driver/Appium.py" />
-        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py" />
         <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/base_page.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/page/stock_group.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/PortfolioTestBase.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/StockGroupTestBase.py" />
+        <option value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_stock_group.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="425" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="160" />
+    <option name="y" value="25" />
     <option name="width" value="1415" />
     <option name="height" value="920" />
   </component>
@@ -206,7 +202,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SeleniumDemo_8" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -221,7 +217,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_portfolio.TestPortfolio.test_stocks_add">
+  <component name="RunManager" selected="Python tests.pytest for test_stock_group.TestStockGroup">
     <configuration name="pytest for test_portfolio.TestPortfolio" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="appium_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,7 +233,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_stock_group.TestStockGroup" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="appium_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,62 +244,14 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_portfolio.TestPortfolio.test_stocks_add&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_xueqiu_1.TestXueqiu" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="appium_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_xueqiu_1.TestXueqiu&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_xueqiu_1.TestXueqiu.test_search" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="appium_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_xueqiu_1.TestXueqiu.test_search&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_xueqiu_1.TestXueqiu.test_search_username" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="appium_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/appiumDemo8_android_0224/testcase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_xueqiu_1.TestXueqiu.test_search_username&quot;" />
+      <option name="_new_target" value="&quot;test_stock_group.TestStockGroup&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_portfolio.TestPortfolio.test_stocks_add" />
+        <item itemvalue="Python tests.pytest for test_stock_group.TestStockGroup" />
         <item itemvalue="Python tests.pytest for test_portfolio.TestPortfolio" />
-        <item itemvalue="Python tests.pytest for test_xueqiu_1.TestXueqiu.test_search_username" />
-        <item itemvalue="Python tests.pytest for test_xueqiu_1.TestXueqiu" />
-        <item itemvalue="Python tests.pytest for test_xueqiu_1.TestXueqiu.test_search" />
       </list>
     </recent_temporary>
   </component>
@@ -321,47 +269,47 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 41m 11s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 09m 34s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 44m 59s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 10m 12s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 45m 55s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup_test_add_group - 2019.03.16 at 17h 12m 06s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup.test_add_group" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 49m 03s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 13m 05s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 52m 40s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 13m 33s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 54m 42s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 14m 21s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.10 at 23h 55m 58s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 18m 24s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.11 at 00h 01m 06s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_list - 2019.03.16 at 17h 42m 08s.xml">
+      <configuration name="pytest for test_portfolio.TestPortfolio.test_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.11 at 00h 02m 04s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_portfolio_TestPortfolio - 2019.03.16 at 17h 46m 28s.xml">
+      <configuration name="pytest for test_portfolio.TestPortfolio" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_portfolio_TestPortfolio_test_stocks_add - 2019.03.11 at 00h 05m 10s.xml">
-      <configuration name="pytest for test_portfolio.TestPortfolio.test_stocks_add" configurationId="tests" />
+    <history-entry file="pytest_for_test_stock_group_TestStockGroup - 2019.03.16 at 17h 51m 26s.xml">
+      <configuration name="pytest for test_stock_group.TestStockGroup" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15653896" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15587847" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5042493" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.64735097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -400,13 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../pythonproject/venv/Lib/site-packages/selenium/webdriver/remote/webelement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="528" column="8" selection-start-line="528" selection-start-column="8" selection-end-line="528" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/test_xueqiu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -417,89 +358,161 @@
     <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/screenhot/jiaoyi_1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/homepage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#31#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../pythonproject/venv/Lib/site-packages/appium/webdriver/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="192" column="8" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/portfolio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#21#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_xueqiu_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="e#17#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding>
-            <element signature="e#29#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/driver/Appium.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="600">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#15#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py">
+    <entry file="file://$PROJECT_DIR$/../pythonproject/venv/Lib/site-packages/appium/webdriver/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="4224">
+          <caret line="192" column="8" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/课堂笔记_0224">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/课堂笔记_20190221">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_xueqiu_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <element signature="e#16#29#0" expanded="true" />
+            <element signature="e#17#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py">
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/0224_zuoye4_adb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="216">
+          <caret line="108" column="154" selection-start-line="108" selection-start-column="121" selection-end-line="108" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pythonproject/venv/Lib/site-packages/appium/webdriver/common/mobileby.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pythonproject/venv/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/portfolio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="21" />
           <folding>
-            <element signature="e#15#58#0" expanded="true" />
+            <element signature="e#23#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/base_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="220">
+          <caret line="40" column="55" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="55" />
           <folding>
             <element signature="e#17#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/StockGroupTestBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#15#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/PortfolioTestBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding>
+            <element signature="e#15#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/homepage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#29#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/page/stock_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_stock_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#15#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appiumDemo8_android_0224/testcase/test_portfolio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
           </folding>
         </state>
       </provider>

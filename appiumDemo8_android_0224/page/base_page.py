@@ -31,7 +31,6 @@ class BasePage(object):
         try:
             return Appium.getDriver().find_element(by, value)
         except:
-            print("yichang")
             self.exception_handle()
             return Appium.getDriver().find_element(by, value)
 
