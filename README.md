@@ -1,2 +1,2 @@
 # appium_test
-这是一个测试项目
+appium雪球实战项目
